@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atharva Tijare | Personal Website</title>
+    <meta
+      name="description"
+      content="Professional personal website featuring background, projects, skills, and contact details."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav container">
+        <a href="#top" class="logo">Atharva Tijare</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <section id="top" class="hero container">
+        <p class="eyebrow">Software Engineering Student • Cybersecurity Concentration</p>
+        <h1>Atharva Tijare</h1>
+        <p class="hero-copy">
+          Computer Science student at UNC Charlotte (GPA 3.84) with internship experience at Cisco and hands-on project work in web development, APIs, and data-driven applications.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section id="about" class="section container">
+        <h2>About Me</h2>
+        <p>
+          I am a Computer Science student at the University of North Carolina Charlotte, graduating in May 2026, with a concentration in Cybersecurity. I enjoy building reliable software and applying strong engineering fundamentals to solve real business problems.
+        </p>
+        <p>
+          My background includes software engineering internship experience at Cisco, teaching support for Data Structures, and project work using Python, JavaScript, and API-driven web technologies.
+        </p>
+      </section>
+
+      <section id="education" class="section container">
+        <h2>Education</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>University of North Carolina Charlotte</h3>
+            <p>B.S. in Computer Science • Concentration in Cybersecurity</p>
+            <p>GPA: 3.84 • Expected Graduation: May 2026</p>
+            <p class="stack">Honors: Dean's List, Chancellor's List</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section container">
+        <h2>Experience</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Cisco Systems Inc. • Software Engineering Intern</h3>
+            <p>July 2024 – September 2024</p>
+            <p>
+              Automated subnet allocation by building a Python tool for ESP site management and implemented address space allocation based on standard design patterns.
+            </p>
+            <p class="stack">Impact: Saved approximately 30 hours per week.</p>
+          </article>
+          <article class="card">
+            <h3>UNC Charlotte • Teaching/Instructional Assistant</h3>
+            <p>January 2024 – May 2024</p>
+            <p>
+              Supported Data Structures students through labs and office hours, helping explain core concepts and debug complex coding assignments.
+            </p>
+            <p class="stack">Focus: Student support, debugging, clear technical communication.</p>
+          </article>
+          <article class="card">
+            <h3>Revelin7 Technology • Software Intern</h3>
+            <p>March 2021 – July 2021</p>
+            <p>
+              Performed data analysis for blockchain management software and collaborated with a team to deliver tasks on time with strong documentation.
+            </p>
+            <p class="stack">Focus: Data analysis, collaboration, communication.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="projects" class="section container">
+        <h2>Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>WiseWallet</h3>
+            <p>
+              Personal finance-focused project centered on helping users track spending, monitor budgets, and make more informed money decisions.
+            </p>
+            <p class="stack">Tech: To be updated</p>
+            <a href="https://wisewallet.manuswebworks.org/register.html" target="_blank" rel="noreferrer" aria-label="View WiseWallet live web app">Project Link</a>
+          </article>
+          <article class="card">
+            <h3>TreeSense</h3>
+            <p>
+              TreeSense is a web application that identifies tree species from leaf images using a deep learning model. It uses a server-side API architecture to avoid browser compilation issues with large TensorFlow.js models.
+            </p>
+            <p class="stack">Tech: React, TypeScript, Vite, Flask, Keras MobileNetV2</p>
+            <p class="stack">Architecture: Server-side API design with Vite proxy routing /api/* requests to the Flask backend.</p>
+            <a href="https://atijare.github.io/TreeSense/" target="_blank" rel="noreferrer" aria-label="View TreeSense live web app">Project Link</a>
+          </article>
+          <article class="card">
+            <h3>HoopConnect</h3>
+            <p>
+              HoopConnect is a front-end NBA web app where fans can explore players, browse teams by division, and engage through an interactive fan form.
+            </p>
+            <p class="stack">Tech: HTML, CSS, JavaScript, Local JSON Data</p>
+            <p class="stack">Highlights: Hero image carousel, tab-based player profiles, division-based team filtering, and real-time form validation.</p>
+            <a href="https://atijare.github.io/Hoop-Connect/" target="_blank" rel="noreferrer" aria-label="View HoopConnect live web app">Project Link</a>
+          </article>
+          <article class="card">
+            <h3>Restaurant Ordering API</h3>
+            <p>
+              Designed and implemented a Python-based API to process user requests and restaurant orders, guided by user stories and requirements analysis.
+            </p>
+            <p class="stack">Tech: Python, REST API Design</p>
+            <a href="https://github.com/atijare" target="_blank" rel="noreferrer" aria-label="View Restaurant Ordering API project code">Project Link</a>
+          </article>
+          <article class="card">
+            <h3>Project Coming Soon</h3>
+            <p>
+              Placeholder for a future project addition. Add your project summary, stack, and repository or live demo link.
+            </p>
+            <p class="stack">Tech: TBD</p>
+            <a href="#" aria-label="Future project placeholder">Project Link</a>
+          </article>
+          <article class="card">
+            <h3>Project Coming Soon</h3>
+            <p>
+              Placeholder for a future project addition. Add your project summary, stack, and repository or live demo link.
+            </p>
+            <p class="stack">Tech: TBD</p>
+            <a href="#" aria-label="Future project placeholder">Project Link</a>
+          </article>
+        </div>
+      </section>
+
+      <section id="skills" class="section container">
+        <h2>Core Skills</h2>
+        <ul class="skill-list">
+          <li>Languages: Python, C, JavaScript</li>
+          <li>Web: HTML, CSS, JavaScript, API Integration</li>
+          <li>Core CS: Data Structures, Algorithms, Database Design</li>
+          <li>Engineering: Software Engineering, QA, Testing & Debugging</li>
+        </ul>
+      </section>
+
+      <section id="contact" class="section container contact">
+        <h2>Contact</h2>
+        <p>Open to internships, full-time roles, and meaningful collaborations.</p>
+        <div class="contact-links">
+          <a href="mailto:tijare.atharva@gmail.com">tijare.atharva@gmail.com</a>
+          <a href="tel:+19842925905">(984) 292-5905</a>
+          <a href="https://www.linkedin.com/in/atharva-tijare" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/atijare" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; <span id="year"></span> Atharva Tijare. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
