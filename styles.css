@@ -195,16 +195,25 @@ main {
   width: min(520px, 100%);
   position: relative;
   overflow: visible;
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .timeline-item:nth-child(odd) {
   justify-self: start;
   margin-right: auto;
+  transform: translateX(-40px);
 }
 
 .timeline-item:nth-child(even) {
   justify-self: end;
   margin-left: auto;
+  transform: translateX(40px);
+}
+
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .timeline-dot {
@@ -515,6 +524,14 @@ main {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .timeline-item {
+    transition: none;
+    opacity: 1;
+    transform: none;
   }
 }
 
