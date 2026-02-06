@@ -21,3 +21,24 @@ if (timelineItems.length > 0) {
 
   timelineItems.forEach((item) => observer.observe(item));
 }
+
+const projectCards = document.querySelectorAll(".project-card");
+
+if (projectCards.length > 0) {
+  const projectObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+          projectObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  projectCards.forEach((card, index) => {
+    card.style.transitionDelay = `${index * 220}ms`;
+    projectObserver.observe(card);
+  });
+}
