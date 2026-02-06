@@ -1,13 +1,14 @@
 :root {
-  --bg: #060a12;
-  --surface: #0d1321;
-  --surface-alt: #101a2b;
-  --text: #e9f3ff;
-  --muted: #bfd1e8;
-  --accent: #22d3ee;
-  --accent-dark: #67e8f9;
-  --border: #1f2f47;
-  --shadow: 0 18px 40px rgba(2, 8, 20, 0.6);
+  --bg: #132035;
+  --surface: #152235;
+  --surface-alt: #1a2b43;
+  --text: #e6f2ff;
+  --muted: #b9cbe0;
+  --accent: #5bbaf5;
+  --accent-dark: #2f86c8;
+  --border: #24364f;
+  --section-tint: #16253a;
+  --shadow: 0 18px 40px rgba(6, 12, 20, 0.45);
 }
 
 * {
@@ -21,25 +22,17 @@ html {
 }
 
 body {
-  font-family: "Space Grotesk", "Segoe UI", sans-serif;
+  font-family: "Sora", "Segoe UI", sans-serif;
   color: var(--text);
   line-height: 1.65;
   background:
-    radial-gradient(circle at 15% 10%, rgba(34, 211, 238, 0.14), transparent 35%),
-    radial-gradient(circle at 85% 5%, rgba(56, 189, 248, 0.1), transparent 30%),
-    linear-gradient(180deg, #04070e 0%, #060a12 45%, #070d18 100%);
+    radial-gradient(circle at 12% 8%, rgba(91, 186, 245, 0.16), transparent 45%),
+    radial-gradient(circle at 90% 5%, rgba(80, 164, 226, 0.14), transparent 40%),
+    linear-gradient(180deg, #162338 0%, #182a42 55%, #1b2f48 100%);
 }
 
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background-image:
-    linear-gradient(rgba(34, 211, 238, 0.05) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(34, 211, 238, 0.05) 1px, transparent 1px);
-  background-size: 36px 36px;
-  pointer-events: none;
-  z-index: -1;
+main {
+  background: transparent;
 }
 
 .container {
@@ -57,18 +50,18 @@ body::before {
   align-items: center;
   gap: 1rem;
   padding: 0.8rem 1rem;
-  border: 1px solid #26486d;
+  border: 1px solid var(--border);
   border-radius: 999px;
-  backdrop-filter: blur(4px);
-  background: rgba(8, 14, 26, 0.85);
-  box-shadow: 0 0 0 1px rgba(34, 211, 238, 0.15), 0 10px 30px rgba(0, 0, 0, 0.35);
+  backdrop-filter: none;
+  background: var(--surface);
+  box-shadow: 0 12px 28px rgba(5, 14, 28, 0.5);
 }
 
 .logo {
-  font-family: "Orbitron", "Space Grotesk", sans-serif;
+  font-family: "Fraunces", "Sora", serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: #dff8ff;
+  color: #dff0ff;
   text-decoration: none;
   letter-spacing: 0.04em;
 }
@@ -82,7 +75,7 @@ body::before {
 
 .nav-links a {
   text-decoration: none;
-  color: #d5e4f8;
+  color: var(--muted);
   font-weight: 500;
 }
 
@@ -96,18 +89,17 @@ body::before {
 }
 
 .eyebrow {
-  color: #7ee8ff;
+  color: var(--accent);
   font-weight: 600;
   margin-bottom: 0.8rem;
 }
 
 .hero h1 {
-  font-family: "Orbitron", "Space Grotesk", sans-serif;
+  font-family: "Fraunces", "Sora", serif;
   font-size: clamp(2rem, 5vw, 3.8rem);
   line-height: 1.15;
   margin-bottom: 1.2rem;
   max-width: 16ch;
-  text-shadow: 0 0 16px rgba(34, 211, 238, 0.25);
 }
 
 .hero-copy {
@@ -137,27 +129,28 @@ body::before {
 }
 
 .btn-primary {
-  background: linear-gradient(120deg, #0891b2, #22d3ee);
-  color: #04111d;
-  border-color: rgba(34, 211, 238, 0.7);
+  background: linear-gradient(120deg, #2f86c8, #66c3ff);
+  color: #04121f;
+  border-color: rgba(91, 186, 245, 0.6);
 }
 
 .btn-primary:hover {
-  background: linear-gradient(120deg, #06b6d4, #67e8f9);
+  background: linear-gradient(120deg, #2b76b2, #8ad3ff);
 }
 
 .btn-secondary {
-  border-color: #315781;
-  color: #ecf6ff;
-  background: rgba(11, 20, 35, 0.96);
+  border-color: #2b3f5c;
+  color: #e6f2ff;
+  background: #1a2b43;
 }
 
 .section {
   padding: 4rem 0 1rem;
 }
 
+
 .section h2 {
-  font-family: "Orbitron", "Space Grotesk", sans-serif;
+  font-family: "Fraunces", "Sora", serif;
   font-size: clamp(1.5rem, 2.8vw, 2.2rem);
   margin-bottom: 1.1rem;
   letter-spacing: 0.03em;
@@ -169,7 +162,7 @@ body::before {
 }
 
 .card p {
-  color: #d2e4fb;
+  color: #c7d9ee;
 }
 
 .cards {
@@ -188,36 +181,25 @@ body::before {
 
 .card {
   border: 1px solid var(--border);
-  background: linear-gradient(160deg, #0d1628 0%, #0b1423 60%, #101d32 100%);
-  border-radius: 16px;
-  padding: 1.2rem;
-  box-shadow: var(--shadow);
+  border-left: 4px solid rgba(91, 186, 245, 0.55);
+  background: var(--surface);
+  border-radius: 12px;
+  padding: 1.2rem 1.3rem;
+  box-shadow: 0 14px 30px rgba(5, 14, 28, 0.45);
   position: relative;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .card::before {
-  content: "";
-  position: absolute;
-  inset: 0 auto auto 0;
-  width: 100%;
-  height: 5px;
-  background: linear-gradient(90deg, #0891b2, #22d3ee, #7dd3fc);
+  content: none;
 }
 
 .card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 22px 42px rgba(12, 40, 33, 0.14);
+  transform: translateY(-2px);
+  box-shadow: 0 18px 34px rgba(5, 14, 28, 0.55);
 }
 
-.card:nth-child(2) {
-  background: linear-gradient(160deg, #0f1a2d 0%, #0c1525 60%, #13243c 100%);
-}
-
-.card:nth-child(3) {
-  background: linear-gradient(160deg, #0f1a2d 0%, #0d1728 60%, #142741 100%);
-}
 
 .featured-card {
   margin-top: 1.3rem;
@@ -225,7 +207,7 @@ body::before {
 
 .beat-list {
   margin: 0.9rem 0 0.4rem 1rem;
-  color: #c6dcf5;
+  color: #b4c8df;
 }
 
 .beat-list li {
@@ -252,8 +234,8 @@ body::before {
   height: 46px;
   border-radius: 8px;
   object-fit: cover;
-  border: 1px solid #33557c;
-  background: #0a1322;
+  border: 1px solid #2b3f5c;
+  background: #111d2d;
   flex-shrink: 0;
 }
 
@@ -263,13 +245,13 @@ body::before {
 }
 
 .card-title-row h3 a:hover {
-  color: var(--accent-dark);
+  color: var(--accent);
 }
 
 .card .stack {
   margin-top: 0.8rem;
   font-size: 0.92rem;
-  color: #a9dcff;
+  color: #9fb8d3;
 }
 
 .skill-list {
@@ -283,7 +265,7 @@ body::before {
   border: 1px solid var(--border);
   padding: 0.9rem;
   border-radius: 12px;
-  background: linear-gradient(150deg, #0f1a2d 0%, #101d32 100%);
+  background: var(--surface);
 }
 
 .contact-links {
@@ -294,17 +276,17 @@ body::before {
 }
 
 .contact-links a {
-  color: #86efff;
+  color: var(--accent);
 }
 
 .contact-links a:hover {
-  color: #c6f7ff;
+  color: var(--accent-dark);
 }
 
 .footer {
   text-align: center;
   padding: 2.2rem 0;
-  color: #afc5de;
+  color: #9fb0c7;
 }
 
 @keyframes rise-in {
