@@ -172,6 +172,94 @@ main {
   gap: 1rem;
 }
 
+.timeline {
+  position: relative;
+  margin-top: 1.6rem;
+  display: grid;
+  gap: 2rem;
+  padding: 0.5rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, rgba(91, 186, 245, 0.1), rgba(91, 186, 245, 0.6), rgba(91, 186, 245, 0.1));
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  width: min(520px, 100%);
+  position: relative;
+  overflow: visible;
+}
+
+.timeline-item:nth-child(odd) {
+  justify-self: start;
+  margin-right: auto;
+}
+
+.timeline-item:nth-child(even) {
+  justify-self: end;
+  margin-left: auto;
+}
+
+.timeline-dot {
+  position: absolute;
+  top: 1.2rem;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 6px rgba(91, 186, 245, 0.12);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  left: calc(100% + 26px);
+  transform: translate(-50%, -50%);
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -26px;
+  transform: translate(-50%, -50%);
+}
+
+.timeline-marker {
+  position: absolute;
+  top: 0.65rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: calc(0.9rem + 2px);
+  color: var(--muted);
+  z-index: 2;
+  white-space: nowrap;
+}
+
+.timeline-marker img {
+  width: 72px;
+  height: 72px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid #2b3f5c;
+  background: #111d2d;
+}
+
+.timeline-item:nth-child(odd) .timeline-marker {
+  left: calc(100% + 8px);
+}
+
+.timeline-item:nth-child(even) .timeline-marker {
+  right: calc(100% + 8px);
+  text-align: right;
+  flex-direction: row-reverse;
+}
+
 .split-grid {
   margin-top: 1.3rem;
   display: grid;
@@ -189,6 +277,10 @@ main {
   position: relative;
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timeline-item.card {
+  overflow: visible;
 }
 
 .card::before {
@@ -212,6 +304,15 @@ main {
 
 .beat-list li {
   margin-bottom: 0.4rem;
+}
+
+.impact-list {
+  margin: 0.8rem 0 0.2rem 1.1rem;
+  color: #c7d9ee;
+}
+
+.impact-list li {
+  margin-bottom: 0.6rem;
 }
 
 .card h3 {
@@ -283,6 +384,53 @@ main {
   color: var(--accent-dark);
 }
 
+.contact-card {
+  margin-top: 1.4rem;
+  border: 1px solid var(--border);
+  border-left: 4px solid rgba(91, 186, 245, 0.55);
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 1.6rem;
+  box-shadow: 0 14px 30px rgba(5, 14, 28, 0.45);
+}
+
+.contact-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 0.45rem;
+  color: var(--muted);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  border: 1px solid #2b3f5c;
+  background: #111d2d;
+  color: var(--text);
+  font-family: "Sora", "Segoe UI", sans-serif;
+  font-size: 1rem;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #8ea7c3;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(91, 186, 245, 0.7);
+  box-shadow: 0 0 0 3px rgba(91, 186, 245, 0.18);
+}
+
 .footer {
   text-align: center;
   padding: 2.2rem 0;
@@ -312,5 +460,37 @@ main {
   .split-grid,
   .skill-list {
     grid-template-columns: 1fr;
+  }
+
+  .timeline {
+    padding-left: 1.4rem;
+  }
+
+  .timeline::before {
+    left: 0;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    width: 100%;
+    justify-self: stretch;
+    margin: 0;
+  }
+
+  .timeline-dot,
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+
+  .timeline-marker,
+  .timeline-item:nth-child(odd) .timeline-marker,
+  .timeline-item:nth-child(even) .timeline-marker {
+    position: static;
+    margin-bottom: 0.7rem;
+    text-align: left;
+    flex-direction: row;
   }
 }

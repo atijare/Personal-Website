@@ -110,39 +110,45 @@
 
       <section id="experience" class="section container">
         <h2>Experience</h2>
-        <div class="cards">
-          <article class="card">
-            <div class="card-title-row">
-              <img src="Images/Klear.png" alt="Klear.ai logo" class="card-logo" />
-              <h3>Klear.ai • Software Engineering Intern</h3>
+        <div class="timeline">
+          <article class="timeline-item card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-marker">
+              <img src="Images/Klear.png" alt="Klear.ai logo" />
+              <span>May 2025 – August 2025</span>
             </div>
-            <p>May 2025 – August 2025</p>
-            <p>
-              Analyzed property and casualty insurance workflows (GL and WC) to identify process inefficiencies, then supported backend solutions that reduced manual work and improved data accuracy.
-            </p>
-            <p class="stack">Impact: Built and optimized SQL-based pipelines that improved master data reliability, reduced delivery bottlenecks, and supported more timely enterprise reporting.</p>
+            <h3>Klear.ai • Full-Stack Developer Intern</h3>
+            <ul class="impact-list">
+              <li>Gained domain expertise in Property and Casualty insurance (GL, WC) while building tools that streamlined claims processing, reduced manual workload, and improved data accuracy.</li>
+              <li>Contributed backend features that supported complex client reporting needs and personalized claim information delivery.</li>
+              <li>Wrote and optimized SQL processes that updated master data tables, resolving client communication errors and ensuring timely information flow.</li>
+            </ul>
           </article>
-          <article class="card">
-            <div class="card-title-row">
-              <img src="Images/cisco.png" alt="Cisco logo" class="card-logo" />
-              <h3>Cisco Systems Inc. • Software Engineering Intern</h3>
+          <article class="timeline-item card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-marker">
+              <img src="Images/cisco.png" alt="Cisco logo" />
+              <span>July 2024 – September 2024</span>
             </div>
-            <p>July 2024 – September 2024</p>
-            <p>
-              Automated subnet allocation by building a Python tool for ESP site management and implemented address space allocation based on standard design patterns.
-            </p>
-            <p class="stack">Impact: Saved approximately 30 hours per week, reduced manual provisioning errors, and improved consistency in network address planning across teams.</p>
+            <h3>Cisco Systems Inc. • Software Engineering Intern</h3>
+            <ul class="impact-list">
+              <li>Engineered a high-efficiency address space allocation system and automated subnet management using Python, saving 30+ hours per week and reducing manual errors.</li>
+              <li>Improved consistency, scalability, and workflows across multiple departments through standardized network planning automation.</li>
+              <li>Developed a scalable classification system for large-scale network records using Pandas, enabling faster preprocessing and data-driven decisions.</li>
+            </ul>
           </article>
-          <article class="card">
-            <div class="card-title-row">
-              <img src="Images/revelin7.png" alt="Revelin7 Technology logo" class="card-logo" />
-              <h3>Revelin7 Technology • Software Intern</h3>
+          <article class="timeline-item card">
+            <div class="timeline-dot"></div>
+            <div class="timeline-marker">
+              <img src="Images/revelin7.png" alt="Revelin7 Technology logo" />
+              <span>March 2021 – July 2021</span>
             </div>
-            <p>March 2021 – July 2021</p>
-            <p>
-              Performed data analysis for blockchain management software and collaborated with a team to deliver tasks on time with strong documentation.
-            </p>
-            <p class="stack">Impact: Improved data quality in blockchain management workflows and helped the team deliver dependable, well-documented releases on schedule.</p>
+            <h3>Revelin7 Technology • Software Development and QA Intern</h3>
+            <ul class="impact-list">
+              <li>Supported QA and validation for blockchain management software by analyzing system outputs, identifying defects, and improving data integrity.</li>
+              <li>Collaborated with interns to meet tight deadlines through task delegation, organized workflows, and clear communication.</li>
+              <li>Ensured clear documentation and high-quality deliverables through teamwork and proactive guidance.</li>
+            </ul>
           </article>
         </div>
       </section>
@@ -205,11 +211,22 @@
       <section id="contact" class="section container contact">
         <h2>Contact</h2>
         <p>Open to internships, full-time roles, and meaningful collaborations.</p>
-        <div class="contact-links">
-          <a href="mailto:tijare.atharva@gmail.com">tijare.atharva@gmail.com</a>
-          <a href="tel:+19842925905">(984) 292-5905</a>
-          <a href="https://www.linkedin.com/in/atharva-tijare" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="https://github.com/atijare" target="_blank" rel="noreferrer">GitHub</a>
+        <div class="contact-card">
+          <form class="contact-form" action="#" method="post">
+            <label>
+              Name
+              <input type="text" name="name" placeholder="Your name" required />
+            </label>
+            <label>
+              Email
+              <input type="email" name="email" placeholder="you@email.com" required />
+            </label>
+            <label>
+              Message
+              <textarea name="message" rows="5" placeholder="Tell me about your project or opportunity" required></textarea>
+            </label>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
         </div>
       </section>
     </main>
