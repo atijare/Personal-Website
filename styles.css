@@ -227,7 +227,7 @@ main {
 
 .timeline-dot {
   position: absolute;
-  top: 1.2rem;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 14px;
@@ -249,19 +249,27 @@ main {
 
 .timeline-marker {
   position: absolute;
-  top: 0.65rem;
-  display: inline-flex;
+  top: 50%;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 0.6rem;
   font-size: calc(0.9rem + 2px);
   color: var(--muted);
   z-index: 2;
+  text-align: center;
+  white-space: normal;
+}
+
+.timeline-marker span {
+  font-size: calc(0.9rem + 4px);
+  font-style: italic;
   white-space: nowrap;
 }
 
 .timeline-marker img {
-  width: 72px;
-  height: 72px;
+  width: 165px;
+  height: 165px;
   border-radius: 8px;
   object-fit: cover;
   border: 1px solid #2b3f5c;
@@ -269,13 +277,13 @@ main {
 }
 
 .timeline-item:nth-child(odd) .timeline-marker {
-  left: calc(100% + 8px);
+  left: calc(100% + 26px);
+  transform: translate(50%, -50%);
 }
 
 .timeline-item:nth-child(even) .timeline-marker {
-  right: calc(100% + 8px);
-  text-align: right;
-  flex-direction: row-reverse;
+  right: calc(100% + 26px);
+  transform: translate(-50%, -50%);
 }
 
 .split-grid {
