@@ -430,6 +430,33 @@ main {
   margin-top: 1.3rem;
 }
 
+.basketball-section > p {
+  max-width: 68ch;
+}
+
+.basketball-gallery {
+  margin-top: 1.4rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.basketball-quote {
+  padding: 0.7rem;
+  border-left-color: rgba(246, 190, 86, 0.62);
+}
+
+.basketball-quote img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  border: 1px solid #2b3f5c;
+  background: #111d2d;
+}
+
 .beat-list {
   margin: 0.9rem 0 0.4rem 1rem;
   color: #b4c8df;
@@ -638,6 +665,7 @@ main {
 
   .cards,
   .split-grid,
+  .basketball-gallery,
   .skill-list {
     grid-template-columns: 1fr;
   }
